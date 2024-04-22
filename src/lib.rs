@@ -12,6 +12,7 @@ pub fn setup(version: String) -> FnResult<String> {
     let stdout = dag()
         .pkgx()?
         .with_exec(vec!["pkgx", "install", &format!("trufflehog@{}", version)])?
+        .with_exec(vec!["trufflehog", "--version"])?
         .stdout()?;
 
     Ok(stdout)
