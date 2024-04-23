@@ -60,7 +60,6 @@ Github Actions:
     plugin: trufflehog
     args: |
       setup
-    working-directory: example
 - name: Show trufflehog version
   run: |
     type trufflehog
