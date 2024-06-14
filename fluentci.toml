@@ -1,0 +1,8 @@
+[package]
+authors = [
+  "Tsiry Sandratraina <tsiry.sndr@fluentci.io>",
+]
+description = "CI/CD Plugin for TruffleHog"
+license = "MIT"
+name = "trufflehog"
+version = "0.1.0"
