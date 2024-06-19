@@ -1,5 +1,6 @@
 # Trufflehog Plugin
 
+[![fluentci pipeline](https://shield.fluentci.io/x/trufflehog)](https://pkg.fluentci.io/trufflehog)
 [![ci](https://github.com/fluentci-io/trufflehog-plugin/actions/workflows/ci.yml/badge.svg)](https://github.com/fluentci-io/trufflehog-plugin/actions/workflows/ci.yml)
 
 This plugin sets up your CI/CD pipeline with a specific version of [trufflehog](https://github.com/trufflesecurity/trufflehog).
