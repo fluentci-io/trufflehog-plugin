@@ -116,3 +116,30 @@ pub fn postman(flags: String) -> FnResult<String> {
         .stdout()?;
     Ok(stdout)
 }
+
+#[plugin_fn]
+pub fn jenkins(flags: String) -> FnResult<String> {
+    let stdout = dag()
+        .pkgx()?
+        .with_exec(vec!["pkgx", "trufflehog", "jenkins", &flags])?
+        .stdout()?;
+    Ok(stdout)
+}
+
+#[plugin_fn]
+pub fn elasticsearch(flags: String) -> FnResult<String> {
+    let stdout = dag()
+        .pkgx()?
+        .with_exec(vec!["pkgx", "trufflehog", "elasticsearch", &flags])?
+        .stdout()?;
+    Ok(stdout)
+}
+
+#[plugin_fn]
+pub fn huggingface(flags: String) -> FnResult<String> {
+    let stdout = dag()
+        .pkgx()?
+        .with_exec(vec!["pkgx", "trufflehog", "huggingface", &flags])?
+        .stdout()?;
+    Ok(stdout)
+}

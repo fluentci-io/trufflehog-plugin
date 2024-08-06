@@ -15,20 +15,23 @@ fluentci run --wasm trufflehog setup
 
 ## Functions
 
-| Name       | Description                                  |
-| ---------- | -------------------------------------------- |
-| setup      | Installs a specific version of trufflehog.   |
-| git        | Find credentials in git repositories         |
-| github     | Find credentials in GitHub repositories.     |
-| gitlab     | Find credentials in GitLab repositories.     |
-| filesystem | Find credentials in a filesystem.            |
-| s3         | Find credentials in S3 buckets.              |
-| gcs        | Find credentials in GCS buckets              |
-| syslog     | Scan syslog                                  |
-| circleci   | Scan CircleCI                                |
-| docker     | Scan Docker Image                            |
-| travisci   | Scan TravisCI                                |
-| postman    | Scan Postman                                 |
+| Name          | Description                                  |
+| ------------- | -------------------------------------------- |
+| setup         | Installs a specific version of trufflehog.   |
+| git           | Find credentials in git repositories         |
+| github        | Find credentials in GitHub repositories.     |
+| gitlab        | Find credentials in GitLab repositories.     |
+| filesystem    | Find credentials in a filesystem.            |
+| s3            | Find credentials in S3 buckets.              |
+| gcs           | Find credentials in GCS buckets              |
+| syslog        | Scan syslog                                  |
+| circleci      | Scan CircleCI                                |
+| docker        | Scan Docker Image                            |
+| travisci      | Scan TravisCI                                |
+| postman       | Scan Postman                                 |
+| jenkins       | Scan Jenkins                                 |
+| elasticsearch | Scan Elasticsearch                           |
+| huggingface   | Scan Huggingface                             |
 
 ## Code Usage
 
@@ -36,7 +39,7 @@ Add `fluentci-pdk` crate to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-fluentci-pdk = "0.1.9"
+fluentci-pdk = "0.2.1"
 ```
 
 Use the following code to call the plugin:
@@ -46,7 +49,7 @@ use fluentci_pdk::dag;
 
 // ...
 
-dag().call("https://pkg.fluentci.io/trufflehog@v0.1.0?wasm=1", "setup", vec!["latest"])?;
+dag().call("https://pkg.fluentci.io/trufflehog@v0.1.1?wasm=1", "setup", vec!["latest"])?;
 ```
 
 ## 📚 Examples

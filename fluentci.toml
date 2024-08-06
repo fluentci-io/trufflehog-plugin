@@ -5,4 +5,4 @@ authors = [
 description = "CI/CD Plugin for TruffleHog"
 license = "MIT"
 name = "trufflehog"
-version = "0.1.0"
+version = "0.1.1"
